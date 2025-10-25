@@ -1,5 +1,5 @@
 // Leaderboard: lấy dữ liệu từ GitHub và hiển thị (name, level, xp)
-import { fetchLeaderboard } from '/js/github-sync.js';
+import { fetchLeaderboard } from '../js/github-sync.js';
 
 customElements.define('leaderboard-view', class extends HTMLElement{
   constructor(){ super(); this.attachShadow({mode:'open'}); }
@@ -50,3 +50,4 @@ customElements.define('leaderboard-view', class extends HTMLElement{
     load();
   }
 });
+
