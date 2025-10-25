@@ -5,9 +5,9 @@ customElements.define('task-list', class extends HTMLElement {
     this.shadowRoot.innerHTML = `
       <style>
         :host{display:block;font-family:system-ui}
-        .box{padding:12px;border:1px dashed #9aa; background:#f9faff; border-radius:8px}
+        .box{padding:12px;border:1px dashed #9aa;background:#f9faff;border-radius:8px}
       </style>
-      <div class="box">✅ Task tab đã nạp STUB thành công. (Đường dẫn import OK)</div>
+      <div class="box">✅ Task tab đã nạp STUB thành công (đường dẫn import OK).</div>
     `;
   }
 });
