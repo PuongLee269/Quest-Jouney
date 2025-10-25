@@ -6,7 +6,7 @@ const tabs  = [...document.querySelectorAll('[data-tab]')];
 const errBox = document.getElementById('err');
 
 // Đổi chuỗi này khi muốn ép trình duyệt tải lại modules
-const VERSION = 'gh-pages-001';
+const VERSION = 'gh-pages-003';
 
 function showErr(e){
   errBox.style.display = 'block';
@@ -36,4 +36,5 @@ async function boot(){
   }catch(e){ showErr(e); }
 }
 boot();
+
 
