@@ -1,8 +1,9 @@
 // Settings: Profile + Zones + Recurring + GitHub Sync (Endpoint)
-import { getProfile, setPlayerName, resetPoints } from '/js/profile.js';
-import { getZones, addZone, updateZone, removeZone } from '/js/zones.js';
-import { getRecurring, addRecurring, removeRecurring } from '/js/recurring.js';
-import { getGitHubConfig, saveGitHubConfig, fetchLeaderboard, autoSyncProfile, syncMyProfileDirect } from '/js/github-sync.js';
+import { getProfile, setPlayerName, resetPoints } from '../js/profile.js';
+import { getZones, addZone, updateZone, removeZone } from '../js/zones.js';
+import { getRecurring, addRecurring, removeRecurring } from '../js/recurring.js';
+import { getGitHubConfig, saveGitHubConfig, fetchLeaderboard, autoSyncProfile, syncMyProfileDirect } from '../js/github-sync.js';
+
 
 customElements.define('settings-view', class extends HTMLElement {
   constructor(){ super(); this.attachShadow({mode:'open'}); }
@@ -214,3 +215,4 @@ customElements.define('settings-view', class extends HTMLElement {
     this.shadowRoot.querySelector('#ghAuto').checked = !!cfg.autosync;
   }
 });
+
