@@ -1,5 +1,5 @@
 // Hồ sơ người chơi: tên, level, XP + tiện ích level
-import { capForLevel, thresholdForLevel, maxLevel } from '/js/levels.js';
+import { capForLevel, thresholdForLevel, maxLevel } from './levels.js';
 
 const LS_PROFILE = 'tq_profile_v2';
 
