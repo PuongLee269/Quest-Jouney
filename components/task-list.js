@@ -1,9 +1,11 @@
 // Task list: tự auto-sync leaderboard khi bấm “Qua ngày” nếu đã bật autosync
-import { getZones } from '/js/zones.js';
-import { addXP, getDailyTaskCap, getLevelInfo, resetPoints, getProfile } from '/js/profile.js';
-import { getSimDay, getSimWeekday, nextSimDay } from '/js/day.js';
-import { getRecurring } from '/js/recurring.js';
-import { getGitHubConfig, autoSyncProfile } from '/js/github-sync.js';
+// trước đây: import { getZones } from '/js/zones.js';
+import { getZones } from '../js/zones.js';
+import { addXP, getDailyTaskCap, getLevelInfo, resetPoints, getProfile } from '../js/profile.js';
+import { getSimDay, getSimWeekday, nextSimDay } from '../js/day.js';
+import { getRecurring } from '../js/recurring.js';
+import { getGitHubConfig, autoSyncProfile } from '../js/github-sync.js';
+
 
 const LS_TASK   = 'tq_tasks_v2';
 const LS_FLAGS  = 'tq_zone_bonus_flags_v1';
@@ -214,3 +216,4 @@ customElements.define('task-list', class extends HTMLElement {
     this.shadowRoot.querySelector('#resetBtn').onclick=()=>{ if (confirm('Reset Level=1 và XP=0?')) { resetPoints(); this._render(); } };
   }
 });
+
